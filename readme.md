@@ -20,4 +20,10 @@ HttpResponse {
 }
 ```
 
-You can also add headers and a body to your response object.
+You can also add headers and a body to your response object like so:
+```javascript
+const response = HttpResponseBuilder.Ok()
+    .addHeader('authorization': 'basic ABC')
+    .setBody({ success: true })
+    .build();
+```
